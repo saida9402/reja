@@ -1,0 +1,486 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.frame {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+.main_frame {
+  position: relative;
+  margin-top: 2px;
+  width: 1440px;
+  height: 1330px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* background-color: rgb(238, 238, 233); */
+}
+
+.main_frame .left_frame {
+  position: relative;
+  margin-top: 2px;
+  width: 305px;
+  height: 1330px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.left_marginer {
+  position: relative;
+  width: 220px;
+  height: 0px;
+  margin-left: 40px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+
+  border: 1.5px solid #f0f0f6;
+}
+
+.main_frame .left_frame .left_1 {
+  position: relative;
+  width: 228px;
+  height: 270px;
+  margin-left: 37px;
+  margin-top: 50px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main_frame .left_frame .left_1 .left_profile_img {
+  position: relative;
+  width: 156.16px;
+  height: 142.53px;
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.main_frame .left_frame .left_1 .left_profile_na1 {
+  position: relative;
+  width: 64px;
+  height: 20.85px;
+
+  color: rgb(43, 43, 43);
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 123.6%;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.main_frame .left_frame .left_1 .left_profile_na2 {
+  width: 147.84px;
+  height: 24.31px;
+  color: rgb(118, 118, 118);
+
+  font-family: Inter;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.main_frame .left_frame .left_1 .left_profile_icons {
+  position: relative;
+  width: 229.99px;
+  height: 22.61px;
+  margin-top: 20px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main_frame .left_frame .left_1 .left_profile_icons .icon {
+  position: relative;
+  width: 24.99px;
+  height: 22px;
+
+  border-radius: 50%;
+  filter: drop-shadow(0 4px rbga(0, 0, 0, 0.25));
+  background: #ffb400;
+}
+
+.link_href {
+  text-decoration: none;
+  color: black;
+}
+
+/* .icon_1 {
+  position: relative;
+  left: 29.15%;
+  right: 27.09%;
+  margin-top: 5.86px;
+} */
+
+.main_frame .left_frame .left_2 {
+  width: 221px;
+  height: 156px;
+  margin-left: 44px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main_frame .left_2 .info_box {
+  width: 223px;
+  height: 25px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.main_frame .info_box .label {
+  color: rgb(43, 43, 43);
+  font-family: Inter;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: right;
+  text-transform: capitalize;
+}
+
+.main_frame .info_box .value {
+  color: rgb(43, 43, 43);
+  font-family: Inter;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: right;
+  text-transform: capitalize;
+}
+
+/* .main_frame .info_box .label {
+  margin-top: 10px;
+
+  background: rgb(255, 180, 0);
+} */
+
+.main_frame .left_frame .left_3 {
+  position: relative;
+  width: 220px;
+  height: 153px;
+  margin-left: 44px;
+  margin-bottom: 20px;
+}
+
+.main_frame .left_3 p {
+  color: rgb(43, 43, 43);
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 123.6%;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.main_frame .left_3 .info_box1 {
+  width: 220px;
+  height: 37px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main_frame .info_box1 .content {
+  position: relative;
+  width: 220px;
+  height: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main_frame .content .value {
+  color: rgb(118, 118, 118);
+  font-family: Inter;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.main_frame .info_box1 .bar {
+  width: 100%;
+  height: 10px;
+  background-color: #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.main_frame .info_box1 .fill {
+  height: 100%;
+  background-color: gold;
+  border-radius: 5px;
+}
+.fill.uzbek {
+  width: 100%;
+}
+
+.fill.korean {
+  width: 90%;
+}
+
+.fill.english {
+  width: 80%;
+}
+
+.main_frame .info_box1 .value {
+  color: rgb(118, 118, 118);
+  font-family: Inter;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.main_frame .info_box1 .label {
+  color: rgb(118, 118, 118);
+  font-family: Inter;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.main_frame .left_frame .left_4 {
+  position: relative;
+  width: 220px;
+  height: auto;
+  margin-left: 44px;
+}
+
+.main_frame .left_4 p {
+  color: rgb(43, 43, 43);
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 123.6%;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.skill {
+  width: 220px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.content {
+  width: 220px;
+  height: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skill .content p {
+  color: rgb(118, 118, 118);
+  font-family: Inter;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.skill .content span {
+  color: rgb(118, 118, 118);
+  font-family: Inter;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.bar {
+  width: 100%;
+  height: 10px;
+  background-color: #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.fill {
+  height: 90%;
+  background-color: gold;
+  border-radius: 5px;
+}
+
+/* Har bir skill uchun maxsus kenglik */
+.fill.html {
+  width: 90%;
+}
+
+.fill.css {
+  width: 85%;
+}
+
+.fill.js {
+  width: 80%;
+}
+
+.fill.NodeJs {
+  width: 85%;
+}
+
+.fill.Python {
+  width: 75%;
+}
+
+.main_frame .left_frame .left_5 {
+  position: relative;
+  width: 186px;
+  height: 200px;
+  margin-left: 44px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.main_frame .left_5 .info_box3 {
+  width: 186px;
+  height: 120px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main_frame .info_box3 .content {
+  width: 186px;
+  height: 24px;
+  gap: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.main_frame .content .icon {
+  width: 15px;
+  height: 15px;
+}
+
+/* midd_frame */
+.main_frame .midd_frame {
+  position: relative;
+  width: 970px;
+  height: 1259px;
+  margin-left: 30px;
+  margin-right: 27px;
+
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+
+  background-color: rgb(203, 203, 104);
+}
+.main_frame .midd_frame .top_box {
+  width: 971px;
+  height: 454.33px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.main_frame .top_box .left {
+  width: 499.51px;
+  height: auto;
+  margin-left: 30px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main_frame .left h1 {
+  width: 499.51px;
+  height: 116.74px;
+
+  color: rgb(43, 43, 43);
+  font-family: Inter;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 123.6%;
+  letter-spacing: 0%;
+  text-align: left;
+}
+
+.main_frame .left p {
+  width: 424.44px;
+  height: 85.61px;
+
+  color: rgb(118, 118, 118);
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.main_frame .top_box .right img {
+  width: 326.06px;
+  height: 446.63px;
+}
+
+.main_frame .bott_box {
+  width: 970px;
+  height: 653px;
+}
+
+.main_frame .right_frame {
+  position: relative;
+  width: 108px;
+  height: 1315px;
+
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(211, 147, 147);
+}
