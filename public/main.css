@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   width: 100%;
@@ -23,7 +27,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  /* background-color: rgb(238, 238, 233); */
+  background-color: rgb(247, 247, 234);
 }
 
 .main_frame .left_frame {
@@ -34,6 +38,7 @@ body {
 
   display: flex;
   flex-direction: column;
+  background-color: white;
 }
 
 .left_marginer {
@@ -124,13 +129,6 @@ body {
   text-decoration: none;
   color: black;
 }
-
-/* .icon_1 {
-  position: relative;
-  left: 29.15%;
-  right: 27.09%;
-  margin-top: 5.86px;
-} */
 
 .main_frame .left_frame .left_2 {
   width: 221px;
@@ -410,22 +408,79 @@ body {
   position: relative;
   width: 970px;
   height: 1259px;
-  margin-left: 30px;
-  margin-right: 27px;
+  margin: 0px 30px 0px 27px;
 
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
-
-  background-color: rgb(203, 203, 104);
 }
 .main_frame .midd_frame .top_box {
   width: 971px;
   height: 454.33px;
+  margin-top: 0px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+
+  background-color: white;
+}
+
+/* Iconlar konteyneri */
+.main_frame .top_box .icon-container {
+  position: absolute;
+  width: 100%;
+  height: 45%;
+  top: 0;
+  left: 0;
+  /* z-index: 1000; */
+
+  pointer-events: none; /* elementlar ustida click bo'lmasin */
+}
+
+/* Har bir icon */
+.main_frame .top_box .icons {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+}
+
+.icons img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Iconlar joylashuvi (figma ko'rinishiga qarab tuzilgan) */
+.icons[data-index="1"] {
+  top: 30px;
+  left: 20px;
+}
+.icons[data-index="2"] {
+  top: 180px;
+  right: 440px;
+}
+.icons[data-index="3"] {
+  top: 380px;
+  left: 360px;
+}
+.icons[data-index="4"] {
+  top: 300px;
+  left: 50%;
+}
+.icons[data-index="5"] {
+  top: 76%;
+  right: 68px;
+}
+.icons[data-index="6"] {
+  bottom: 70%;
+  left: 90%;
+}
+.icons[data-index="7"] {
+  left: 220px;
+  bottom: 160px;
+}
+.icons[data-index="8"] {
+  bottom: 90%;
+  left: 40%;
 }
 
 .main_frame .top_box .left {
@@ -473,6 +528,108 @@ body {
 .main_frame .bott_box {
   width: 970px;
   height: 653px;
+  margin-top: 156px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main_frame .bott_box .context {
+  width: 438px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main_frame h1 {
+  width: 193px;
+  height: 40px;
+  align-items: center;
+
+  color: rgb(43, 43, 43);
+  font-family: Inter;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 123.6%;
+  letter-spacing: 0%;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.main_frame p {
+  width: 440px;
+  height: 68px;
+
+  color: rgb(118, 118, 118);
+  font-family: Inter;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.main_frame .bott_box .boxes {
+  position: relative;
+  width: 970px;
+  height: 530px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.main_frame .boxes .top_box {
+  position: relative;
+  width: 970px;
+  height: 225px;
+  gap: 5px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(247, 247, 234);
+}
+
+.main_frame .top_box .box {
+  width: 310px;
+  height: 225px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: white;
+}
+
+.main_frame .box img {
+  margin-top: 20px;
+}
+
+.main_frame .box span {
+  color: rgb(43, 43, 43);
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 123.6%;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.main_frame .box p {
+  color: rgb(118, 118, 118);
+  font-family: Inter;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: center;
+  text-transform: capitalize;
 }
 
 .main_frame .right_frame {
@@ -482,5 +639,31 @@ body {
 
   display: flex;
   flex-direction: column;
-  background-color: rgb(211, 147, 147);
+  background-color: white;
+}
+
+.main_frame .right_frame .top_icon {
+  /* Contrast */
+  position: relative;
+  width: 55px;
+  height: 55px;
+  margin-top: 50px;
+  margin-left: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main_frame .right_frame .bott_icon {
+  position: relative;
+  width: 65px;
+  height: 493px;
+  /* gap: 10px; */
+  margin-left: 20%;
+  margin-top: 200px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
 }
