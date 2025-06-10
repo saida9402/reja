@@ -1,12 +1,46 @@
-console.log("JACK MA maslahatlari");
-const list = [
-  "yahshi talaba boling", // 0-20
-  "togri boshliq tanlang va koproq hato qiling", // 20-30
-  "uzingizga ishlashingizni boshlang", // 30-40
-  "siz kuchli bolgan narsalarni qiling", // 40-50
-  "yoshlarga investitsiya qiling", // 50-60
-  "endi dam oling, foydasi yog endi", // 60
-];
+//MIT B-TASK
+
+function countDigits(str) {
+  let count = 0;
+  for (let char of str) {
+    if (char >= "0" && char <= "9") {
+      count++;
+    }
+  }
+  return count;
+}
+
+let result = countDigits("ad2a54y79wet0sfgb9");
+console.log("Digitlar soni:", result);
+
+let result2 = countDigits("ad2a54y79wet0sfg332b9");
+console.log("Digitlar soni:", result2);
+
+// MIT  A-TASK
+// function countLetter(letter, word) {
+//   let count = 0;
+
+//   for (let i = 0; i < word.length; i++) {
+//     if (word[i] === letter) {
+//       count++;
+//     }
+//   }
+
+//   return count;
+// }
+// console.log(countLetter("e", "engineer"));
+// console.log(countLetter("a", "saida"));
+// console.log(countLetter("e", "deena"));
+
+// console.log("JACK MA maslahatlari");
+// const list = [
+//   "yahshi talaba boling", // 0-20
+//   "togri boshliq tanlang va koproq hato qiling", // 20-30
+//   "uzingizga ishlashingizni boshlang", // 30-40
+//   "siz kuchli bolgan narsalarni qiling", // 40-50
+//   "yoshlarga investitsiya qiling", // 50-60
+//   "endi dam oling, foydasi yog endi", // 60
+// ];
 
 //1chi holat
 // function maslahatBering(a, callback) {
@@ -155,19 +189,3 @@ const list = [
 // }
 
 // run();
-
-// MIT  A-TASK
-function countLetter(letter, word) {
-  let count = 0;
-
-  for (let i = 0; i < word.length; i++) {
-    if (word[i] === letter) {
-      count++;
-    }
-  }
-
-  return count;
-}
-console.log(countLetter("e", "engineer"));
-console.log(countLetter("a", "saida"));
-console.log(countLetter("e", "deena"));
