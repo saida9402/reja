@@ -15,7 +15,7 @@ fs.readFile("database/user.json", "utf8", (err, data) => {
 
 //MongoDB connect
 const db = require("./server").db(); //serverdan client chaqirib, client ichidagi documentaionga ko'ra shunday yozilsa mongodb objectini (db orqali) qo'lga olib beradi. shu orqali databasega crud(create,read,update,delete) amalarini bajarish imkonini beradi.
-
+const mongodb = require("mongodb");
 // 1. KIrish code // expressga kirib kevotgan ma'lumotlarga bog'liq bo'gan kodlar yoziladi.
 app.use(express.static("public")); //papkasi ichidagi fayllar (CSS, rasmlar, JS fayllar) front-endda to‘g‘ridan-to‘g‘ri ko‘rsatiladi.
 app.use(express.json()); //kirib keladigon json datani object holatiga o'girib beradi. (ya'ni klaynt va web server data json ko'rinishida bo'ladi)
@@ -45,6 +45,17 @@ app.post("/create-item", (req, res) => {
 
 app.get("/author", (req, res) => {
   res.render("author", { user: user });
+});
+
+app.post("/delete-item", (req, res) => {
+  // delete tugmasi uchun
+  const id = req.body.id;
+  db.collection("plans").deleteOne(
+    { _id: new mongodb.ObjectId(id) },
+    function (err, data) {
+      res.json({ state: "success" });
+    }
+  );
 });
 
 app.get("/", function (req, res) {
