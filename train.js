@@ -10,8 +10,8 @@ class Shop {
   }
 
   setTime(soat, daqiqa) {
-    this.soat = String(soat).padStart(2, "0");
-    this.daqiqa = String(daqiqa).padStart(2, "0");
+    this.soat = soat;
+    this.daqiqa = daqiqa;
   }
 
   getTime() {
