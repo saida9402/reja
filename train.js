@@ -1,20 +1,85 @@
-//MIT B-TASK
+//MIT C-TASK
 
-function countDigits(str) {
-  let count = 0;
-  for (let char of str) {
-    if (char >= "0" && char <= "9") {
-      count++;
+class Shop {
+  constructor(non, lagmon, cola) {
+    this.non = non;
+    this.lagmon = lagmon;
+    this.cola = cola;
+    this.soat = "00";
+    this.daqiqa = "00";
+  }
+
+  setTime(soat, daqiqa) {
+    this.soat = String(soat).padStart(2, "0");
+    this.daqiqa = String(daqiqa).padStart(2, "0");
+  }
+
+  getTime() {
+    return `Hozir ${this.soat}:${this.daqiqa}da`;
+  }
+
+  qoldiq() {
+    console.log(
+      `${this.getTime()} ${this.non}ta non, ${this.lagmon}ta lag'mon va ${
+        this.cola
+      }ta cola mavjud`
+    );
+  }
+
+  sotish(nomi, soni) {
+    if (this.hasOwnProperty(nomi)) {
+      if (this[nomi] >= soni) {
+        this[nomi] -= soni;
+        console.log(`${this.getTime()} ${soni}ta ${nomi} sotildi.`);
+      } else {
+        console.log(`${this.getTime()} Xatolik: Yetarli ${nomi} yo'q.`);
+      }
+    } else {
+      console.log(`${this.getTime()} Xatolik: Bunday mahsulot mavjud emas.`);
     }
   }
-  return count;
+
+  qabul(nomi, soni) {
+    if (this.hasOwnProperty(nomi)) {
+      this[nomi] += soni;
+      console.log(`${this.getTime()} ${soni}ta ${nomi} qabul qilindi.`);
+    } else {
+      console.log(`${this.getTime()} Xatolik: Bunday mahsulot mavjud emas.`);
+    }
+  }
 }
 
-let result = countDigits("ad2a54y79wet0sfgb9");
-console.log("Digitlar soni:", result);
+const shop = new Shop(4, 5, 2);
 
-let result2 = countDigits("ad2a54y79wet0sfg332b9");
-console.log("Digitlar soni:", result2);
+shop.setTime(20, 40);
+shop.qoldiq();
+
+shop.setTime(20, 45);
+shop.sotish("non", 3);
+
+shop.setTime(20, 48);
+shop.qabul("cola", 4);
+
+shop.setTime(20, 50);
+shop.qoldiq();
+
+// //MIT B-TASK
+
+// function countDigits(str) {
+//   let count = 0;
+//   for (let char of str) {
+//     if (char >= "0" && char <= "9") {
+//       count++;
+//     }
+//   }
+//   return count;
+// }
+
+// let result = countDigits("ad2a54y79wet0sfgb9");
+// console.log("Digitlar soni:", result);
+
+// let result2 = countDigits("ad2a54y79wet0sfg332b9");
+// console.log("Digitlar soni:", result2);
 
 // MIT  A-TASK
 // function countLetter(letter, word) {
