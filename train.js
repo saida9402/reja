@@ -1,64 +1,84 @@
-//MIT C-TASK
-class Shop {
-  constructor(non, lagmon, cola) {
-    this.non = non;
-    this.lagmon = lagmon;
-    this.cola = cola;
-  }
+// MIT D-TASK
+// split('') → stringni harflarga bo‘ladi: "abc" → ["a", "b", "c"]
+// sort() → harflarni tartiblaydi
+// join('') → arrayni yana stringga aylantiradi
+// So‘ng === bilan taqqoslaymiz
 
-  setTime(soat, daqiqa) {
-    this.soat = soat;
-    this.daqiqa = daqiqa;
-  }
-
-  getTime() {
-    return `Hozir ${this.soat}:${this.daqiqa}da`;
-  }
-
-  qoldiq() {
-    console.log(
-      `${this.getTime()} ${this.non}ta non, ${this.lagmon}ta lag'mon va ${
-        this.cola
-      }ta cola mavjud`
-    );
-  }
-
-  sotish(nomi, soni) {
-    if (this.hasOwnProperty(nomi)) {
-      if (this[nomi] >= soni) {
-        this[nomi] -= soni;
-        console.log(`${this.getTime()} ${soni}ta ${nomi} sotildi.`);
-      } else {
-        console.log(`${this.getTime()} Xatolik: Yetarli ${nomi} yo'q.`);
-      }
-    } else {
-      console.log(`${this.getTime()} Xatolik: Bunday mahsulot mavjud emas.`);
-    }
-  }
-
-  qabul(nomi, soni) {
-    if (this.hasOwnProperty(nomi)) {
-      this[nomi] += soni;
-      console.log(`${this.getTime()} ${soni}ta ${nomi} qabul qilindi.`);
-    } else {
-      console.log(`${this.getTime()} Xatolik: Bunday mahsulot mavjud emas.`);
-    }
-  }
+function checkContent(a, b) {
+  sortA = a.split("").sort().join("");
+  sortB = b.split("").sort().join("");
+  return sortA === sortB;
 }
 
-const shop = new Shop(4, 5, 2);
+console.log(checkContent("mitgroup", "gmtiprou"));
 
-shop.setTime(20, 40);
-shop.qoldiq();
+// function checkContent(a, b){
+//   return a === b;
+// }
+// console.log(checkContent("mitgroup", "gmtiprou"));
+//-> false qaytaradi qachonki (checkContent("mitgroup", "mitgroup") bo'lsa true return qiladi.
 
-shop.setTime(20, 45);
-shop.sotish("non", 3);
+//MIT C-TASK
+// class Shop {
+//   constructor(non, lagmon, cola) {
+//     this.non = non;
+//     this.lagmon = lagmon;
+//     this.cola = cola;
+//   }
 
-shop.setTime(20, 48);
-shop.qabul("cola", 4);
+//   setTime(soat, daqiqa) {
+//     this.soat = soat;
+//     this.daqiqa = daqiqa;
+//   }
 
-shop.setTime(20, 50);
-shop.qoldiq();
+//   getTime() {
+//     return `Hozir ${this.soat}:${this.daqiqa}da`;
+//   }
+
+//   qoldiq() {
+//     console.log(
+//       `${this.getTime()} ${this.non}ta non, ${this.lagmon}ta lag'mon va ${
+//         this.cola
+//       }ta cola mavjud`
+//     );
+//   }
+
+//   sotish(nomi, soni) {
+//     if (this.hasOwnProperty(nomi)) {
+//       if (this[nomi] >= soni) {
+//         this[nomi] -= soni;
+//         console.log(`${this.getTime()} ${soni}ta ${nomi} sotildi.`);
+//       } else {
+//         console.log(`${this.getTime()} Xatolik: Yetarli ${nomi} yo'q.`);
+//       }
+//     } else {
+//       console.log(`${this.getTime()} Xatolik: Bunday mahsulot mavjud emas.`);
+//     }
+//   }
+
+//   qabul(nomi, soni) {
+//     if (this.hasOwnProperty(nomi)) {
+//       this[nomi] += soni;
+//       console.log(`${this.getTime()} ${soni}ta ${nomi} qabul qilindi.`);
+//     } else {
+//       console.log(`${this.getTime()} Xatolik: Bunday mahsulot mavjud emas.`);
+//     }
+//   }
+// }
+
+// const shop = new Shop(4, 5, 2);
+
+// shop.setTime(20, 40);
+// shop.qoldiq();
+
+// shop.setTime(20, 45);
+// shop.sotish("non", 3);
+
+// shop.setTime(20, 48);
+// shop.qabul("cola", 4);
+
+// shop.setTime(20, 50);
+// shop.qoldiq();
 
 // //MIT B-TASK
 
