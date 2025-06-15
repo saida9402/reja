@@ -37,11 +37,11 @@
         <li
           class="list-group-item list-group-item-info d-flex align-items-center justify-content-between"
         >
-          <span><%=item.reja%></span>
+          <span class="item-text"><%=item.reja%></span>
           <div>
             <button
               data-id="<%=item._id%>"
-              class="delete-me btn btn-secondary btn-sm mr-1"
+              class="edit-me btn btn-secondary btn-sm mr-1"
             >
               O'zgartirish
             </button>
@@ -56,7 +56,7 @@
         <% }) %>
       </ul>
 
-      <button class="btn btn-danger" style="margin-top: 20px">
+      <button id="clean-all" class="btn btn-danger" style="margin-top: 20px">
         Hamma Rejalarni o‘chirish
       </button>
     </div>

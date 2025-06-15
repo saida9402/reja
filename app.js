@@ -58,6 +58,42 @@ app.post("/delete-item", (req, res) => {
   );
 });
 
+app.post("/edit-item", (req, res) => {
+  const data = req.body;
+  console.log(data);
+  db.collection("plans").findOneAndUpdate(
+    { _id: new mongodb.ObjectId(data.id) },
+    { $set: { reja: data.new_input } },
+    function (err, data) {
+      res.json({ state: "success" });
+    }
+  );
+});
+
+app.post("/delete-all", (req, res) => {
+  if (req.body.delete_all) {
+    db.collection("plans")
+      .deleteMany({})
+      .then(() => {
+        res.json({ state: "hamma rejalar o'chirildi" });
+      })
+      .catch((err) => {
+        console.log("Xatolik:", err);
+        res.status(500).json({ state: "Xatolik yuz berdi" });
+      });
+  } else {
+    res.status(400).json({ state: "Notog'ri so'rov" });
+  }
+});
+
+// app.post("/delete-all", (req, res) => {
+//   if (req.body.delete_all) {
+//     db.collection("plans").deleteMany(function () {
+//       res.json({ state: "hamma rejalar o'chirildi" });
+//     });
+//   }
+// });
+
 app.get("/", function (req, res) {
   ///data basedan malumot olib o'qish uchun <get> ishlatiladi
   console.log("user entered /");
@@ -83,3 +119,19 @@ module.exports = app;
 // } else {
 //   res.end("successefully added");
 // }
+
+// app.post("/delete-all", (req, res) => {
+//   if (req.body.delete_all) {
+//     db.collection("plans")
+//       .deleteMany({})
+//       .then(() => {
+//         res.json({ state: "hamma rejalar o'chirildi" });
+//       })
+//       .catch((err) => {
+//         console.log("Xatolik:", err);
+//         res.status(500).json({ state: "Xatolik yuz berdi" });
+//       });
+//   } else {
+//     res.status(400).json({ state: "Notog'ri so'rov" });
+//   }
+// });
