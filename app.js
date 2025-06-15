@@ -70,29 +70,30 @@ app.post("/edit-item", (req, res) => {
   );
 });
 
-app.post("/delete-all", (req, res) => {
-  if (req.body.delete_all) {
-    db.collection("plans")
-      .deleteMany({})
-      .then(() => {
-        res.json({ state: "hamma rejalar o'chirildi" });
-      })
-      .catch((err) => {
-        console.log("Xatolik:", err);
-        res.status(500).json({ state: "Xatolik yuz berdi" });
-      });
-  } else {
-    res.status(400).json({ state: "Notog'ri so'rov" });
-  }
-});
-
+//buyam ishlidigon kod chatgptdan
 // app.post("/delete-all", (req, res) => {
 //   if (req.body.delete_all) {
-//     db.collection("plans").deleteMany(function () {
-//       res.json({ state: "hamma rejalar o'chirildi" });
-//     });
+//     db.collection("plans")
+//       .deleteMany({})
+//       .then(() => {
+//         res.json({ state: "hamma rejalar o'chirildi" });
+//       })
+//       .catch((err) => {
+//         console.log("Xatolik:", err);
+//         res.status(500).json({ state: "Xatolik yuz berdi" });
+//       });
+//   } else {
+//     res.status(400).json({ state: "Notog'ri so'rov" });
 //   }
 // });
+
+app.post("/delete-all", (req, res) => {
+  if (req.body.delete_all) {
+    db.collection("plans").deleteMany(function () {
+      res.json({ state: "hamma rejalar o'chirildi" });
+    });
+  }
+});
 
 app.get("/", function (req, res) {
   ///data basedan malumot olib o'qish uchun <get> ishlatiladi
@@ -110,28 +111,3 @@ app.get("/", function (req, res) {
 });
 
 module.exports = app;
-
-// const db = require("./server");
-
-// if (err) {
-//   console.log(err);
-//   res.end("something went wrong");
-// } else {
-//   res.end("successefully added");
-// }
-
-// app.post("/delete-all", (req, res) => {
-//   if (req.body.delete_all) {
-//     db.collection("plans")
-//       .deleteMany({})
-//       .then(() => {
-//         res.json({ state: "hamma rejalar o'chirildi" });
-//       })
-//       .catch((err) => {
-//         console.log("Xatolik:", err);
-//         res.status(500).json({ state: "Xatolik yuz berdi" });
-//       });
-//   } else {
-//     res.status(400).json({ state: "Notog'ri so'rov" });
-//   }
-// });
