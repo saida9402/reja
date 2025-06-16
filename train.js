@@ -271,3 +271,5 @@ console.log(checkContent("mitgroup", "gmtiprou"));
 // }
 
 // run();
+
+//run qilish-> node train.js
