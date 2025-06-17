@@ -1,16 +1,24 @@
+// MIT E-TASK
+function getReverse(a) {
+  return a.split("").reverse().join("");
+}
+
+console.log(getReverse("hello"));
+console.log(getReverse("123456"));
+
 // MIT D-TASK
 // split('') → stringni harflarga bo‘ladi: "abc" → ["a", "b", "c"]
 // sort() → harflarni tartiblaydi
 // join('') → arrayni yana stringga aylantiradi
 // So‘ng === bilan taqqoslaymiz
 
-function checkContent(a, b) {
-  sortA = a.split("").sort().join("");
-  sortB = b.split("").sort().join("");
-  return sortA === sortB;
-}
+// function checkContent(a, b) {
+//   sortA = a.split("").sort().join("");
+//   sortB = b.split("").sort().join("");
+//   return sortA === sortB;
+// }
 
-console.log(checkContent("mitgroup", "gmtiprou"));
+// console.log(checkContent("mitgroup", "gmtiprou"));
 
 // function checkContent(a, b){
 //   return a === b;
