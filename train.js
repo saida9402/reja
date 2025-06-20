@@ -1,10 +1,36 @@
-// MIT E-TASK
-function getReverse(a) {
-  return a.split("").reverse().join("");
+// MIT F-TASK
+function findDoublers(a) {
+  let doubleHarf = {};
+
+  for (let i = 0; i < a.length; i++) {
+    let char = a[i];
+
+    if (doubleHarf[char]) {
+      return true; 
+    } else {
+      doubleHarf[char] = 1; 
+    }
+  }
+
+  return false;
 }
 
-console.log(getReverse("hello"));
-console.log(getReverse("123456"));
+console.log (findDoublers("hello"));
+console.log (findDoublers("helo"));
+// console.log (findDoublers("사이다"));
+console.log (findDoublers("55677"));
+console.log (findDoublers("55677bbu"));
+console.log (findDoublers("bu"));
+
+  ​
+
+// MIT E-TASK
+// function getReverse(a) {
+//   return a.split("").reverse().join("");
+// }
+
+// console.log(getReverse("hello"));
+// console.log(getReverse("123456"));
 
 // MIT D-TASK
 // split('') → stringni harflarga bo‘ladi: "abc" → ["a", "b", "c"]
